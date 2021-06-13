@@ -1,0 +1,333 @@
+
+body, h1, h2, p {
+    font-family:"游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3",
+    "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝",'Noto Serif JP',serif;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .7s, transform .7s;
+}
+
+section.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* nav */
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+
+
+.navpare {
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 60px;
+}
+
+.navpare h1 {
+    margin: 0;
+    font-size: x-large;
+    line-height: 64px;
+    margin-left: 15px;
+}
+
+.navpare p {
+    margin: auto;
+    font-size: 20px;
+}
+
+
+.sp-menu {
+    margin-left:auto;
+}
+
+.sp-menu #open {
+    font-size: 32px;
+    line-height: 74px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.sp-menu #open .hide {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background:#000;
+    color: #fff;
+    text-align: center;
+    padding: 64px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+}
+
+.overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 3;
+}
+
+.overlay #close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.overlay ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+.overlay li {
+    margin-top: 32px;
+    
+}
+
+.overlay li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.pc-menu {
+    display: none;
+}
+
+
+
+/* swiper */
+
+.brank {
+    height: 60px;
+}
+
+.swiper-slide {
+    overflow: hidden;
+}
+
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    transition: 1.9s ease;
+}
+
+.swiper-slide-active img {
+    transform: none;
+}
+
+.swiper-slide-active .hero__title {
+    opacity: 1;
+    transform: translate(-50%,-50%);
+}
+
+.hero__title{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 13px;
+    z-index: 1;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.309);
+    transition: opacity 1.5s ease 1s, transform 0.3s ease 1s;
+}
+
+
+
+.nadir-main,
+.nadir-sub {
+    text-align: center;
+}
+
+
+
+.nadir-sub {
+    margin-top: 30px;
+}
+
+/* storesection */
+
+#nadirlogo {
+    width: 100px;
+}
+
+.features img {
+    width: 100%;
+}
+
+.features > h1 {
+    text-align: center;
+    padding: 70px 0 30px 0;
+    font-weight: normal;
+}
+
+.features .container {
+    margin: 0 32px;
+    
+}
+
+#staff .container {
+    background-color: rgba(169, 169, 169, 0.404);
+}
+
+.features p {
+    line-height: 1.8;
+}
+
+.features section {
+    padding-bottom: 64px;
+}
+
+.yoyakupc {
+    display: none;
+}
+
+#map .pic{
+    width: 80%;
+    text-align: center;
+}
+
+.footer {
+    height: 40px;
+    margin-top: 30px;
+}
+
+.info p ,
+.info h2{
+    padding: 5px;
+}
+
+
+
+@media (min-width:752px) {
+
+
+    .swiper-slide img{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    
+
+    .brank {
+        height: 60px;
+    }
+
+    .pc-menu {
+        display: block;
+        margin-left: auto;
+        background-color: black;
+        color: white;
+    }
+
+    .sp-menu {
+        display: none;
+    }
+
+    .pc-menu #bnav {
+        text-align: right;
+    }
+    
+    
+    .pc-menu #bnav ul li{
+        display: inline-block;
+        padding-right: 20px;
+    }
+    
+    .pc-menu #bnav a{
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+    }
+    
+    #bnav a:before {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        width: 100%;
+        height: 1px;
+        background: #fff;
+        transform: scale(0, 1);
+        transition: 0.4s;
+    }
+    #bnav a:hover:before {
+        transform: scale(1);
+    } 
+
+    .hero__title{
+        font-size: 20px;
+    }
+
+
+    .features .container {
+        width: 752px;
+        margin: 0 auto;
+    }
+
+    .features section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .features section:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .features .pic {
+        width: 50%;
+    }
+
+    .features .yoyaku {
+        margin: auto;
+    }
+
+    .features .info {
+        width: calc(50% - 100px);
+        margin: auto;
+    }
+
+    .yoyakutb {
+        display: none;
+    }
+
+    .yoyakupc {
+        display: inline;
+    }
+
+    #map .pic{
+        width: 40%;
+        text-align: center;
+    }
+
+    #contact p {
+        text-align: center;
+    } 
+
+
+}   
