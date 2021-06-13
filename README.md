@@ -1,5 +1,5 @@
 # hairsalon-demo
-<img src="hairsalon.png" width="320px">
+<img src="img/hairsalon.png" width="320px">
 案件にてヘアサロンの静的HPを制作させていただきました。
 <a href="https://nadir-hair.com/">Nadir　様</a>
 
