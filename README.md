@@ -1,7 +1,7 @@
 # hairsalon-demo
 
 ## 概要
-実案件として、ヘアサロンのホームページを設計しました。
+実案件として、ヘアサロンのホームページをデザイン・制作しました。
 
 <br><br>
 サイトURL：[https://www.nadir-hair.com/](https://www.nadir-hair.com/)
