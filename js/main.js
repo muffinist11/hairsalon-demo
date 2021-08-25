@@ -59,7 +59,12 @@
           effect: "coverflow",
           grabCursor: true,
           centeredSlides: true,
-          slidesPerView: 2,
+          slidesPerView: 1,
+          breakpoints: {
+            600: {
+                slidesPerView: 2,
+            }
+          },
           loop:true,
           autoplay: {
             delay: 5000,
