@@ -55,57 +55,28 @@
 
         //swiper
 
-        document.addEventListener('DOMContentLoaded',function() {
-            const hero = new HeroSlider('.swiper-container');
-            hero.start({delay: 4000});
-
-            // setTimeout(()=>{
-            //     hero.stop();
-            // },5000)
+        const swiper = new Swiper(".myswiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 2,
+          loop:true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
         });
 
-        class HeroSlider {
-            constructor(el) {
-                this.el = el;
-                this.swiper = this._initSwiper();
-
-            }   
-
-            _initSwiper() {
-                return new Swiper(this.el,{
-                    // Optional parameters
-                    // direction: 'vertical',
-                    
-                    loop: true,
-                    grabCursor: true,
-                    effect: 'coverflow',
-                    centeredSlides: true,
-                    slidesPerView: 1,
-                    speed: 1000,
-                    breakpoints: {
-                        600: {
-                            slidesPerView: 2,
-                        }
-                    },
-
-                });
-
-            }
-
-            start(options = {}) {
-                Object.assign({
-                    delay:3000,
-                    disableOnInteraction: false
-                },options);
-
-                this.swiper.params.autoplay = options;
-                    this.swiper.autoplay.start();
-            }
-
-            stop(){
-                this.swiper.autoplay.stop();
-            }
-        }
 
 
 }
